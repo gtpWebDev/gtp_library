@@ -1,0 +1,23 @@
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 2px;;
+}
+
+input {
+  border: 2px solid #000;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+

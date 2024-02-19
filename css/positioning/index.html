@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <body>
+
+    <h3>Static - the default, follow the document flow</h3>
+
+    <div class="parent">
+      Parent
+      <div class="child-one">One</div>
+      <div class="child-two">Two</div>
+    </div>
+    
+    <h3>Relative - "RELATIVE TO SELF" or "NUDGE" from where static would put it</h3>
+    <p>Relative with no adjustments acts broadly like static</p>
+    <p>The other elements just assume its where it would have been with static positioning</p>
+    <p>Note it moves the element in such a way that it actually overflows the items around it</p>
+    <p>position: relative; left: 40px; top: 10px;</p>
+    <div class="parent">
+      Parent
+      <div class="child-one child-relative">One</div>
+      <div class="child-two">Two</div>
+    </div>
+
+    <h3>Absolute - removes object so that flow ignores its existence</h3>
+    <p>The other elements in this case literally assume that the absolute element no longer exists</p>
+    <p>IMPORTANTLY, the left, right, top, bottom adjustments are based on the position element of the parent</p>
+    <p>If the parent is static, the adjustments are to the top left of the screen - unlikely this is useful</p>
+    <p>If the parent is relative (or absolute), the adjustments are to the top left of the parent - VERY USEFUL</p>
+    <p>position: absolute; left: 80px; top: 20px (parent position is relative in this case)</p>
+    <div class="parent parent-relative">
+      Parent
+      <div class="child-one child-absolute">One</div>
+      <div class="child-two">Two</div>
+    </div>
+
+    <h3>Fixed - as absolute but always positioned relative to the html, not the parent</h3>
+    <p>The element literally doesn't move even when scrolling down</p>
+    <p>Seems to position in its normal static position until left, right, etc. are applied then relative to the html element </p>
+    <p>See bototm right fxhash notification for a common use case</p>
+    <p>position: fixed; top: 820px; left: 150px;</p>
+    
+    <div class="parent">
+      Parent
+      <div class="child-one child-fixed">Fixed One, I don't move even when scrolled</div>
+      <div class="child-two">Two</div>
+    </div>
+
+    <div class="fxhash-notification">
+      <p>Example of fixed - notifications on objkt or fxhash</p>
+    </div>
+
+    <h3>Sticky - "STATIC THEN STUBBORNLY FIXED"</h3>
+    <p>This is basically static until it is to be scrolled off page, at which point it become fixed</p>
+    <p>Seems to be restricted to the bounds of its parent though</p>
+    <p>This is how you get the cool scroll effects!</p>
+   
+    <div class="parent" style="height:400px">
+      Parent
+      <div class="child-one child-sticky">Sticky One</div>
+      <div class="child-two">Two</div>
+    </div>
+
+    <!-- 
+<h2>Positioning examples:</h2>
+
+ Static and relative
+
+Absolute
+
+Fixed
+
+Sticky]
+ -->
+
+</body>
+
+
+</body>
+</html>

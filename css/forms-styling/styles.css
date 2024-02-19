@@ -1,0 +1,72 @@
+
+/* inherit used to ensure form uses parent styles rather than browser defaults */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+
+input,
+textarea,
+select,
+button {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+fieldset {
+  position: relative;
+}
+
+legend {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* removes system level styling */
+input {
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+
+

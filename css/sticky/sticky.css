@@ -1,0 +1,58 @@
+
+html {
+  margin: 0 40px;
+
+}
+
+p {
+  margin: 0;
+}
+
+.parent1 {
+  background-color: lightblue;
+  padding: 25px;
+  font-size: 24px;
+  width: 200px;
+  height: 300vh;
+}
+
+.parent2 {
+  margin-top: 20px;
+  background-color: lightgreen;
+  font-size: 24px;
+  width: 200px;
+  height: 50vh;
+}
+
+.parent3 {
+  margin-top: 20px;
+  background-color: lightgray;
+  font-size: 24px;
+  width: 200px;
+  height: 50vh;
+}
+
+
+.child-one {
+  background-color: lightgreen;
+  
+}
+
+.child-two {
+  background-color: rgb(198, 102, 102);
+}
+
+.child-sticky-one {
+  position: sticky;
+  top: 0;
+}
+
+.child-sticky-two {
+  position: sticky;
+  top: 30px;
+}
+
+.child-sticky-three {
+  position: sticky;
+  top: 60px;
+}

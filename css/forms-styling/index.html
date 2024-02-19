@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form styling</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <h1>Some styling guidance for forms, which can otherwise be tricky</h1>
+
+  <h1>Hopefully I'll revisit this during the project, haven't gone through the materials as yet</h1>
+
+  <h2><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling">This link has advanced form styling tips</a></h2>
+
+  <h2><a href="https://internetingishard.netlify.app/html-and-css/forms/index.html">This link has an advanced worked example</a></h2>
+
+
+  <form action="https://httpbin.org/post" method="post">
+
+    <fieldset>
+      <legend>Text for option group in bottom right</legend>
+      <ul>
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+
+    </fieldset>
+
+  
+  </form>
+
+
+
+  <form>
+    <fieldset>
+    <legend>Fruit preferences</legend>
+
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="cherry" />
+        I like cherry
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="banana" disabled />
+        I can't like banana
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="strawberry" />
+        I like strawberry
+      </label>
+    </p>
+  </fieldset>
+  </form>
+  
+
+
+</body>
+</html>

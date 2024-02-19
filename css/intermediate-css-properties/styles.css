@@ -1,0 +1,24 @@
+
+p#shadows {
+  width: 300px;
+  margin: 30px auto;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px red;
+  box-shadow: 10px 5px 5px red;
+  box-shadow: 3px 3px 15px red, 6px 6px 15px black;
+
+
+
+}
+
+
+p#overflow {
+  width: 300px;
+  height: 50px;
+  margin: 30px auto;
+  border: 2px solid red;
+  overflow: auto;
+
+
+}

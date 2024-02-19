@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced selectors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <style>
+    .emojify::before {
+      content: 'BEFORE';
+      background-color: green;
+  }
+  
+    .emojify::after {
+      content: 'AFTER';
+      background-color: blue;
+  }
+  </style>
+
+  <body>
+    
+    <div class="outsideClass">
+      <p>3 subtly different types of heirarchy selectors</p>
+
+      <p><label>Descendent selectors - to select labels anywhere within divs, use "div label {}"</label></p>
+
+      <p><label id="insideId">to select a label with id, use label#id {}</label></p>
+
+      <div>
+        <label>Direct child selectors - to select a label IN THE DIRECT CHILD of a div, use div>label {}</label>
+      </div>
+
+      <div>
+        <p id="id1"></p>
+        <label for="">General sibling - to select all siblings of p with id1, use p#id1 ~ label</label>
+      </div>
+
+      <div>
+        <p id="id2"></p>
+        <label for="">Adjacent sibling - to select all siblings of p with id2, use p#id2 + label</label>
+      </div>
+
+    </div>
+
+
+  <div> Using pseudo-selectors before and after to add specific things <span class="emojify"> and </span> the word and in this span!</div>
+
+  <div>
+    <p id="first-letter-text">This is a line of text with a pseudo-selector used to make the first letter and line text different</p>
+  </div>
+
+  <main class="parent">
+    The following section demonstrates child and sibling selectors
+    <div class="child group1">
+      
+      <p>child group1</p>
+      <div class="grand-child group1">
+        <p>grand child group1</p>
+      </div>
+    </div>
+    <div class="child group2">
+      <p>child group2</p>
+      <div class="grand-child group2">
+        grand child group2
+      </div>
+    </div>
+    <div class="child group3">
+      <p>child group3</p>
+      <div class="grand-child group3">
+        <p>grand child group3</p>
+      </div>
+    </div>
+  </main>
+
+  <p>
+  Finally attribute selectors. Selecting things that have attributes - e.g. "src"
+  e.g. images with sources that have *.jpg - could be useful I suppose.
+  </p>
+  Just look these up when they might be useful.
+
+  <a href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-selectors#pseudo-classes">here</a>
+
+  
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+/* child and sibling combinators */
+
+main > div { /* direct children of main */
+  background-color: green;
+}
+
+main > div > div { /* grand-children of main only */
+  background-color: yellow;
+}
+
+.group1 + div { /* the div immediately following group 1 on same level */
+  background-color: red;
+}
+
+.group1 + div + div { /* the div 2 adjacent to group 1 on same level */
+  background-color: blue;
+}
+
+.group1 ~ div { /* all of group1 siblings */
+  background-color: purple;
+}
+
+::selection {
+  font-size: 60px;
+}
+
+#first-letter-text {
+  width: 100px;
+  font-size: 12px;
+}
+
+#first-letter-text::first-letter {
+  font-size: 46px;
+}
+
+#first-letter-text::first-line {
+  font-size: 30px;
+}
+
+
+div label {
+  font-size: 56px;
+  background-color: red;
+  color: white;
+}
+
+div>label {
+  font-size: 56px;
+}
+
+p#id1 ~ label {
+  background-color: blue;
+}
+
+p#id2 + label {
+  background-color: darkgoldenrod;
+
+}
+label#insideId {
+  background-color: orange;;
+  color: white;
+}
+
+[src] {
+  /* This will target any element that has a src attribute. */
+}
+
+img[src] {
+  /* This will only target img elements that have a src attribute. */
+}
+
+img[src="puppy.jpg"] {
+  /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+}

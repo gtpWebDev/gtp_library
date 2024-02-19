@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <h1>Client-Side Form validation</h1>
+
+  <h2>Note, client-side validation can be bypassed, server-side validation is essential!</h2>
+
+  <h2>For now this only covers built-in validations, not custom validations</h2>
+
+  <h2>Use "required" attribute to make the field required</h2>
+  <p>Good practice is that required fields should always have an asterisk</p>
+
+  <form action="#" method="get">
+    <div>
+      <label for="user_email">*Email:</label>
+      <input type="email" id="user_email" name="user_email" required>
+    </div>
+    <br>
+  
+    <div>
+      <label for="user_password">*Password:</label>
+      <input type="password" id="user_password" name="user_password" required>
+    </div>
+
+    <br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <h2>Minimum and maximum length validation</h2>
+  <p>"minlength" and "maxlength" attributes achieves this</p>
+  <p>below the minimum gives a comment saying not enough, above it does not allow text anymore</p>
+
+  <form action="#" method="get">
+    <div>
+      <textarea placeholder="What's happening?" minlength="3" maxlength="20"></textarea>
+    </div>
+    
+    <button type="submit">Tweet</button>
+  </form>
+
+  <h2>Number ranges for various number inputs</h2>
+  <p>Up and down arrows don't allow beyond min and max</p>
+  <p>Can type in wrong numbers, but submit doesn't allow and comment tells user</p>
+
+  <form action="#" method="get">
+    <div>
+      <label for="quantity">Quantity</label>
+    </div>
+    <input type="number" id="quantity" name="quantity" min="1" max="5" value="0">
+    
+    <div>
+      <button type="submit">Place Order</button>
+    </div>
+  </form>
+
+  <h2>Pattern recognition such as zip codes</h2>
+  <p>"(\d{5}([\-]\d{4})?)" is the paatern for a zip code - "00000-0000"</p>
+  <p>Placeholder is also important when requiring a certain pattern</p>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">This link explains regular expressions</a>
+
+  <form action="#" method="get">
+    <div>
+      <label for="zip_code">Postal / Zip Code:</label>
+    </div>
+  
+    <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" placeholder="65251" required>
+  
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <h2>E-mail and url input types automatically validate the inputs</h2>
+  <p>url requires http or https:</p>
+  <p>email generally requires an @</p>
+
+  <form action="#" method="get">
+    <div>
+      <label for="email">Email:</label>
+    </div>
+    <input type="email" id="email" name="email">
+  
+    <div>
+      <label for="website">Website:</label>
+    </div>
+    <input type="url" id="website" name="website">
+  
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <h2>Styling validation</h2>
+  <p>We use css to style :valid and :invalid pseudo-classes</p>
+  <p>e.g. input:valid { border-color: green } (this applies everywhere on this sheet)</p>
+
+  <form action="#" method="get">
+    <div>
+      <label for="email">Email</label>
+    </div>
+    <input type="email" id="email" name="email">
+  
+    <div>
+      <label for="website">Website</label>
+    </div>
+    <input type="url" id="website" name="website">
+  
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+
+
+</body>
+</html>

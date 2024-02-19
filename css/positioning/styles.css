@@ -1,0 +1,67 @@
+
+html {
+  margin: 0 40px;
+  height: 300vh;
+}
+
+p {
+  margin: 0;
+}
+
+.parent {
+  background-color: lightblue;
+  padding: 25px;
+  font-size: 24px;
+  width: 200px;
+}
+
+
+.child-one {
+  background-color: lightgreen;
+  
+}
+
+.child-two {
+  background-color: rgb(198, 102, 102);
+}
+
+.child-three {
+  background-color: pink;
+}
+
+.child-relative {
+  position: relative;
+  left: 40px;
+  top: 10px;
+}
+
+.parent-relative {
+  position: relative;
+}
+
+.child-absolute {
+  position: absolute;
+  left: 100px;
+  top: 25px;
+}
+
+.child-fixed {
+  position: fixed;
+  top: 820px;
+  left: 150px;
+}
+
+.child-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.fxhash-notification {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 200px;
+  height: 80px;
+  background-color: green;
+  color: white;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text styles</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  
+  <h1>Font families</h1>
+
+  <h2>Font-family hierarchy</h2>
+  <div>
+    <p>Use a large, generic font family hierarchy defined by a variable so don't have to reuse</p>
+    <p>The font-family is defined in the root, with a quite comprehensive list of fonts that have been chosen to cover every possibility across multiple op systems, etc.</p>
+    <p>This is a safe approach but perhaps a bit bland.</p>
+  </div>
+
+
+  <h2>Importing fonts "live" from online libraries</h2>
+  <div class="trying-roboto">
+    <p>Roboto font here is imported either through a link in html file or @import in css file</p>
+    <p>Note, if the live call fails, the fallback is essential in stopping your site form breaking.</p>
+  </div>
+
+  <h2>Or you can use a font file and link it through @font-face</h2>
+  <div class="imported-font-file">
+    This font is a downloaded font file resident in the fonts directory
+  </div>
+
+  <h1>Font Styles</h1>
+  <div class="text-styles"></divclass>>
+    <p id="text-transform">text transformed - typed in lower, changed to upper</p>
+    <p id="text-shadow">text shadow - quite complex options, 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">link here</a>
+    </p>
+    <p class="overflowing">overflowing approach to replace any overflowing text with ... when there isn't enough spaceeeeee</p>
+
+    <div class="line-height">
+      <p>increased line height can increase readibility</p>
+    </div>
+
+    <p class="letter-spacing">letter can be spaced differently, useful for headings?</p>
+
+  </div>
+
+
+</body>
+</html>

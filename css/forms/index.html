@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- this web address on submit shows you the data that it has received on a new page -->
+  <form action="https://httpbin.org/post" method="post">
+
+
+    <!-- nice sections! -->
+    <fieldset>
+
+      <!-- must be immediately after the fieldset -->
+      <legend>Full name</legend>
+
+      <label for="first_name">First Name:</label>
+      <!-- name is effectively the variable name that will be submitted -->
+      <!-- They are NECESSARY for the data to be sent -->
+      <input type="text" id="first_name" name="first_name" placeholder="Bob">
+
+      <br>
+      <label for="second_name">Second Name:</label>
+      <input type="text" id="second_name" name="second_name" placeholder="Simpson">
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>email and password</legend>
+
+      <br>
+      <label for="user_email">Email:</label>
+      <input type="email" id="user_email" name="email" placeholder="john@yahoo.com">
+
+      <br>
+      <!-- note using autofocus as the initial element with focus on load -->
+      <label for="user_password">Password:</label>
+      <input type="password" id="user_password" name="password" autofocus="true">
+
+  </fieldset>
+
+    <br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount">
+
+    <!-- note the min, max and step -->
+    <label for="pennies">Pennies:</label>
+    <input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
+
+    <h2>Slider</h2>
+
+    <!-- slider, important to configure correctly -->
+    <!-- note, output is associated with the slider, and javascript output.textContent = price.value is used to display it, and an eventlistener for "input" event -->
+    <label for="price">Choose a maximum house price: </label>
+    <input
+      type="range"
+      name="price"
+      id="price"
+      min="50000"
+      max="500000"
+      step="100"
+      value="60000" />
+    <output class="price-output" for="price"></output>
+    <br>
+
+    <h2>Meter</h2>
+    <!-- Kind of shows green, amber, red according to internal min, etc. rules -->
+    <meter min="0" max="100" value="25" low="33" high="66" optimum="0">75</meter>
+
+    <h2>Progress</h2>
+    <!-- Progress meter type of thing, I guess user can't input -->
+    <progress max="100" value="75">75/100</progress>
+
+    <fieldset>
+    <h2>Dates and times</h2>
+    <fieldset>
+      <legend>Dates and times examples</legend>
+      <!-- again, min, max and step can be used to constrain -->
+      <input type="datetime-local" name="datetime" id="datetime" />
+      <input type="month" name="month" id="month" />
+      <input type="time" name="time" id="time" />
+      <input type="week" name="week" id="week" />
+
+    </fieldset>
+
+    <input type="color" name="color" id="color" />
+
+    <br>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <br>
+    <!-- Users can add line breaks -->
+    <!-- note, its possible to control the resizing - stopping it vertically, horizontally, etc. -->
+    <textarea id="textarea" name="textarea" rows="20" cols="60">For longer comments</textarea>
+
+    <!-- used for searching I guess a linked database in the back end -->
+    <input type="search" id="search" name="search" />
+
+    <!-- if the value attribute is included, this is what is sent, otherwise the text is sent. Selected is what is chosen at start -->
+    <br>
+    <select name="Car">
+      <optgroup label="First group"></optgroup>
+      <option value="mercedes">Mercedes</option>
+      <option value="tesla">Tesla</option>
+      <option value="volvo" selected>Volvo</option>
+      <optgroup label="Second group"></optgroup>
+      <option value="bmw">BMW</option>
+      <option value="mini">Mini</option>
+      <option value="ford">Ford</option>
+    </select>
+
+    <br>
+    <select name="fashion">
+      <optgroup label="Clothing">
+        <option value="t_shirt">T-Shirts</option>
+        <option value="sweater">Sweaters</option>
+        <option value="coats">Coats</option>
+      </optgroup>
+      <optgroup label="Foot Wear">
+        <option value="sneakers">Sneakers</option>
+        <option value="boots">Boots</option>
+        <option value="sandals">Sandals</option>
+      </optgroup>
+    </select>
+
+    <br>
+
+    <h2>Multiple choice</h2>
+    <!-- multiple choice select, size determines height of widget -->
+    <select id="multi" name="multi" multiple size="4">
+      <optgroup label="fruits">
+        <option>Banana</option>
+        <option selected>Cherry</option>
+        <option>Lemon</option>
+      </optgroup>
+      <optgroup label="vegetables">
+        <option>Carrot</option>
+        <option>Eggplant</option>
+        <option>Potato</option>
+      </optgroup>
+    </select>
+
+
+  <h2>Data list</h2>
+  <!-- Really nice option to allow e.g. a text input and have pre-chosen options to choose from-->
+  <!-- note IE does not support, there are ways to have a fallback -->
+  <!-- Search "fallback" in https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls -->
+  <label for="myFruit">What's your favorite fruit?</label>
+  <input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
+  <datalist id="mySuggestion">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Blackberry</option>
+    <option>Blueberry</option>
+    <option>Lemon</option>
+    <option>Lychee</option>
+    <option>Peach</option>
+    <option>Pear</option>
+  </datalist>
+
+
+    <h1>Ticket Type</h1>
+    <!-- radio buttons that use the same name attribute only allow one to be chosen -->
+    <!-- here, checked is the one selected at start -->
+
+    <fieldset>
+
+      <legend>Radio options!</legend>
+
+      <div>
+        <input type="radio" id="child" name="ticket_type" value="child">
+        <label for="child">Child</label>
+      </div>
+
+      <div>
+        <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+        <label for="adult">Adult</label>
+      </div>
+
+      <div>
+        <input type="radio" id="senior" name="ticket_type" value="senior">
+        <label for="senior">Senior</label>
+      </div>
+
+    </fieldset>
+
+    <h1>Pizza Toppings</h1>
+    <!-- check boxes allow multiple choices -->
+    <div>
+      <input type="checkbox" id="sausage" name="topping" value="sausage">
+      <label for="sausage">Sausage</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="onions" name="topping" value="onions">
+      <label for="onions">Onions</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label>
+    </div>
+
+    <div>
+      <input type="file" name="file" id="file" accept="image/*" multiple />
+    </div>
+
+    <br>
+    <!-- obvious -->
+    <button type="reset">Reset</button>
+    <!-- will submit the action and method -->
+    <button type="submit">Submit</button>
+    <!-- type button is a generic button that can be used for anything -->
+    <!-- should be explicit to avoid submitting if don't want to -->
+    <button type="button">Click to Toggle</button>
+
+  </form>
+
+</body>
+</html>

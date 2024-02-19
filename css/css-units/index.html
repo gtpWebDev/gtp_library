@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+<h1>CSS Units</h1>
+
+<div id="id1">
+
+  <h3>A piece of advice is to use rem for font-sizes and px for everything else</h3>
+  <h3>this allows users to get larger fonts when they zoom in</h3>
+  <h3>em are fiddly and difficult to maintain</h3>
+
+
+  <div id="variable-text">
+    Using calc(16px + 0.5vw) to give nicely responsive text size
+  </div>
+
+  <p></p>
+  
+
+
+
+
+  Main text size
+
+  Units based on parent font-size:
+  <div id="id2">2em</div>
+  <div id="id3">1.5em</div>
+  <p></p>
+
+  Units based on root/html font-size (seems to default to root if both):
+  (Users can often be given control of the base font-size of a website)
+  <div id="id4">2rem</div>
+  <div id="id5">1.5rem</div>
+
+  Viewport-relative: vh and vw
+  <div id="id6">25% of viewport</div>
+  <div id="id7">10% of viewport</div>
+
+  Viewport-relative based on max/min of dimensions of vmin and vmax
+  <div id="id8">25% of min viewport - wide and tall get small</div>
+  <div id="id9">25% of max viewport - wide and tall get big</div>
+
+  Variations include swh,swh - assumes all browser menus etc are open, so screen size is minimum of possible
+  Variations include lwh,lwh - assumes all browser menus etc are closed, so screen size is maximum of possible
+  <div id="id10">25% of small viewport</div>
+  <div id="id11">25% of large viewport</div>
+
+<p id="lineheight">lh and lw based on line height and width, allowing things such as underlines irrespective of the number of lines that the ext take sup in the window. lh and lw based on line height and width, allowing things such as underlines irrespective of the number of lines that the ext take sup in the window. lh and lw based on line height and width, allowing things such as underlines irrespective of the number of lines that the ext take sup in the window.</p>
+
+<p>rlh and rlw based on root equivalent</p>
+
+<p>% relative to the parent also potentially useful - e.g. font-size: 50%</p>
+
+</div>
+
+
+</body>
+</html>

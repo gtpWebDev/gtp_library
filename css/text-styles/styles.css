@@ -1,0 +1,59 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --system-ui: system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  font-family: var(--system-ui);
+}
+
+div {
+  font-family: sans-serif;
+}
+
+.trying-roboto {
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif; /* backup font important is collecting preference from an API */
+}
+
+@font-face {
+  font-family: my-cool-font;
+  src: url(./fonts/JacquardaBastarda9-Regular.ttf)
+}
+
+.imported-font-file {
+  font-size: 26px;
+  font-family: my-cool-font;
+}
+
+.text-styles {
+}
+
+#text-transform {
+  text-transform: uppercase;
+}
+
+#text-shadow {
+  text-shadow: 1px 1px 2px black;
+}
+
+.overflowing {
+  max-width: 650px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-height {
+  width: 100px;
+  line-height: 1.5;
+}
+
+.letter-spacing {
+  letter-spacing: 0.5rem;
+  border-image: ;
+}
