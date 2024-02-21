@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Sizing</title>
+  <link rel="stylesheet" href="grid-sizing-styles.css">
+</head>
+<body>
+  
+  <h4>grid-template: 40px / 40px 40px 40px 40px 40px;
+  </h4>
+  <p>fixed lengths mean container is not filled</p>
+
+  <div class="grid-container">
+    <div class="room" id="col1">Column 1</div>
+    <div class="room" id="col2">Column 2</div>
+    <div class="room" id="col3">Column 3</div>
+    <div class="room" id="col4">Column 4</div>
+    <div class="room" id="col5">Column 5</div>
+  </div>
+
+  <h4>grid-template: 40px / 40px 40px 40px 1fr 2fr;
+  </h4>
+  <p>fractional units take up remaining space based on relative numbers of fr</p>
+
+  <div class="grid-container2">
+    <div class="room" id="col1">Column 1</div>
+    <div class="room" id="col2">Column 2</div>
+    <div class="room" id="col3">Column 3</div>
+    <div class="room" id="col4">Column 4</div>
+    <div class="room" id="col5">Column 5</div>
+  </div>
+
+
+  <h4>grid-template: 40px / 40px 40px 40px 40px min-content;
+  </h4>
+  <p>min-content here relates to the longest word in the sentence</p>
+
+  <div class="grid-container3">
+    <div class="room" id="col1">Column 1</div>
+    <div class="room" id="col2">Column 2</div>
+    <div class="room" id="col3">Column 3</div>
+    <div class="room" id="col4">Column 4</div>
+    <div class="room" id="col5">A longer sentence</div>
+  </div>
+
+  <h4>grid-template: 40px / 40px 40px 40px 40px max-content;
+  </h4>
+  <p>max-content here relates to the width of the sentence</p>
+
+  <div class="grid-container4">
+    <div class="room" id="col1">Column 1</div>
+    <div class="room" id="col2">Column 2</div>
+    <div class="room" id="col3">Column 3</div>
+    <div class="room" id="col4">Column 4</div>
+    <div class="room" id="col5">A longer sentence</div>
+  </div>
+
+  <h4>grid-template: 40px / 40px 40px 1fr 1fr auto;
+  </h4>
+  <p>here, auto loses "the fight" against fr</p>
+
+  <div class="grid-container5">
+    <div class="room" id="col1">Column 1</div>
+    <div class="room" id="col2">Column 2</div>
+    <div class="room" id="col3">Column 3</div>
+    <div class="room" id="col4">Column 4</div>
+    <div class="room" id="col5">Column 5</div>
+  </div>
+
+
+  <h4>grid-template: 40px / 40px 40px 1fr repeat(2,minmax(100px, 200px));
+  </h4>
+  <p>Repeat useful</p>
+  <p>Minmax self-explanatory</p>
+
+  <div class="grid-container6">
+    <div class="room" id="col1">Column 1</div>
+    <div class="room" id="col2">Column 2</div>
+    <div class="room" id="col3">Column 3</div>
+    <div class="room" id="col4">Column 4</div>
+    <div class="room" id="col5">Column 5</div>
+  </div>
+
+
+</body>
+</html>

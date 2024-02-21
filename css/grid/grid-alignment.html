@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid alignment</title>
+  <link rel="stylesheet" href="grid-alignment-styles.css">
+</head>
+<body>
+  
+
+  <h1>Grid Alignment</h1>
+
+  <h3>Aligning items within their areas</h3>
+  <p>Each item is aligned to the right and bottom< using justify-items and align-items/p>
+
+  <div class="grid-container">
+    <div class="room" id="living-room">Living Room</div>
+    <div class="room" id="kitchen">Kitchen</div>
+    <div class="room" id="bedroom">Bedroom</div>
+    <div class="room" id="bathroom">Bathroom</div>
+    <div class="room" id="closet">Closet</div>
+  </div>
+
+
+  <h3>Aligning the grid content should the items not fill the whole grid container area</h3>
+  <p>Using justify-content "space-around" and align-content "center"</p>
+  <p>seem similar to flexbox</p>
+
+  <div class="grid-container2">
+    <div class="room" id="living-room">Living Room</div>
+    <div class="room" id="kitchen">Kitchen</div>
+    <div class="room" id="bedroom">Bedroom</div>
+    <div class="room" id="bathroom">Bathroom</div>
+    <div class="room" id="closet">Closet</div>
+  </div>
+
+  <h3>Can also justify individual items with justify-self</h3>
+
+  <div class="grid-container">
+    <div class="room" id="living-room2">stretch/center</div>
+    <div class="room" id="kitchen">Kitchen</div>
+    <div class="room" id="bedroom2">place-self center</div>
+    <div class="room" id="bathroom">Bathroom</div>
+    <div class="room" id="closet">Closet</div>
+  </div>
+
+
+
+</body>
+</html>
