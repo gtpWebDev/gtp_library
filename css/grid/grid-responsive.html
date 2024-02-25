@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid</title>
+  <link rel="stylesheet" href="grid-responsive-styles.css">
+</head>
+<body>
+
+  <h2>Minmax can only be used to define grid row and column sizes</h2>
+  <p>grid-template-columns: repeat(2, minmax(150px, 200px));</p>
+
+  <div class="all-grid-containers grid-container2">
+    <div class="grid-item">
+      <p>Odin 1</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 2</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 3</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 4</p>
+    </div>
+  </div>
+
+  <h2>Use clamp to control the width and height dynamically</h2>
+  <p>grid-template-columns: repeat(5, clamp(150px, 20%, 200px));</p>
+  <p>Typically clamp would be used with 2 outer fixed values and a dynamic ideal value</p>
+
+  <div class="all-grid-containers grid-container">
+    <div class="grid-item">
+      <p>Odin 1</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 2</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 3</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 4</p>
+    </div>
+  </div>
+
+  <h2>Auto-fit and minmax - calculates the max number of columns within the constraints of the minmax function that won't overflow the grid</h2>
+  <p>grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))</p>
+  <p>when the grid size has a width below the minimum, it starts reducing the number of columns</p>
+
+  <div class="all-grid-containers grid-container3">
+    <div class="grid-item">
+      <p>Odin 1</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 2</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 3</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 4</p>
+    </div>
+  </div>
+
+  <h2>Auto-fill and minmax - calculates the max number of columns within the constraints of the minmax function that won't overflow the grid</h2>
+  <p>grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))</p>
+  <p>when the overall grid width is wider than the max cells, they snap back to their minimum?</p>
+
+  <div class="all-grid-containers grid-container4">
+    <div class="grid-item">
+      <p>Odin 1</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 2</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 3</p>
+    </div>
+    <div class="grid-item">
+      <p>Odin 4</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+h2 {
+  color: white;
+}
+
+.blue-button {
+  background-color: blue;
+  color: white;
+}
+
+/* Default for the modal until it is required */
+#dialog-no-display {
+  display: none
+}
+
+/* styling for modal, the display: grid makes it visible, so important to closely control this */
+#dialog-display {
+  
+  background-color: blue;
+  padding: 40px 30px;
+  gap: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: var(--white);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin-left: auto;
+  margin-top: 20vh;
+  
+}
+
+dialog::backdrop {
+background-color: rgb(10, 10, 11);
+opacity: 0.85;
+}
+
+form {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  place-items: center;
+}
+
+#form-inputs {
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: auto 1fr;
+  row-gap: 20px;
+  column-gap: 20px;;
+  justify-items: left;
+}
+
+#form-buttons {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+#form-submit, #form-cancel {
+  place-self: center;
+  background-color: var(--darkestColour);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 30px;
+  font-size: 18px;
+}
+

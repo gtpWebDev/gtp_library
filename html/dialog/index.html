@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odin Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <!-- location of dialog doesn't seem important  -->
+  <dialog id="dialog-no-display">
+    <h2>Please provide details...</h2>
+    <!-- method dialog necessary when form located in a dialog -->
+    <form action="" method="dialog">
+      <div id="form-inputs">
+        <label class="form-label" for="book-name">Book Title:</label>
+        <input class="form-input" type="text" id="form-book-name" name="book-name" placeholder="Lord of the rings..." required>
+      </div>
+      <div id="form-buttons">
+        <button id="form-submit" class="form-button" type="submit">Submit</button>
+        <button id="form-cancel" class="form-button" type="cancel" autofocus>Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="top-container">
+    <div>
+      <button id="open-dialog-button" class="blue-button">Add Book</button>
+    </div>
+  </div>
+
+</body>
+</html>
